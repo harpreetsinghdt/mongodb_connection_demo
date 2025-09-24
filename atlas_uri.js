@@ -1,1 +1,1 @@
-module.exports = uri = "mongodb+srv://myAtlasDBUser:myAtlasDBPassword@myatlasclusteredu.ygk8drg.mongodb.net/?retryWrites=true&w=majority&appName=myAtlasClusterEDU"
+module.exports = process.env.MONGODB_URI;

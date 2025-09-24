@@ -1,5 +1,11 @@
 const { MongoClient } = require("mongodb");
-const uri = require("./atlas_uri");
+require('dotenv').config();
+const uri = require('./atlas_uri');
+
+if (!uri) {
+  console.error('Error: MONGODB_URI is not set in the environment variables.');
+  process.exit(1);
+}
 console.log(uri);
 
 const client = new MongoClient(uri);
